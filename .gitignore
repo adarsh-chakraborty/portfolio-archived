@@ -9,7 +9,7 @@ node_modules/
 /coverage
 ztailwind.config.js
 # production
-/build
+/frontend/build
 
 # misc
 .DS_Store
