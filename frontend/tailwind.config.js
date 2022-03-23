@@ -22,10 +22,22 @@ module.exports = {
           '100%': {
             width: '100%'
           }
+        },
+        grow: {
+          '0%': {
+            width: '0%',
+            height: '0%'
+          },
+
+          '100%': {
+            width: '100%',
+            height: '100%'
+          }
         }
       },
       animation: {
-        highlight: 'highlight 0.5s ease-in-out forwards'
+        highlight: 'highlight 0.5s ease-in-out',
+        grow: 'grow 0.3s ease-in-out'
       }
     }
   },

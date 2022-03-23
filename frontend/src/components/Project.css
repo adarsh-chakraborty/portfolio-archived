@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  height: 2.75rem;
+  width: 2.75rem;
+  background-color: green;
+  border-radius: 100%;
+  z-index: 0;
+}
