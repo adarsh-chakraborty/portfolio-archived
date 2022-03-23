@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "1",
+    "title": "E-commerce app",
+    "description": "A full stack E-commerce app built with React, Bootstrap and NodeJS.",
+    "img": "https://picsum.photos/200/300",
+    "gitUrl": "https://github.com/adarsh-chakraborty/",
+    "liveUrl": "https://github.com/adarsh-chakraborty/",
+    "tools": ["React", "Express", "MongoDB", "Bootstrap"]
+  },
+  {
+    "_id": "2",
+    "title": "BuddyMeter",
+    "description": "Create quiz and share with friends and see how well they know you.",
+    "img": "https://picsum.photos/200/300",
+    "gitUrl": "https://github.com/adarsh-chakraborty/BuddyMeter",
+    "liveUrl": "https://buddymeter.gq/",
+    "tools": ["React", "Express", "MongoDB", "Tailwindcss"]
+  },
+  {
+    "_id": "3",
+    "title": "Curtate Url Shortner",
+    "description": "Shorten URLs on the fly, No Registration required!",
+    "img": "https://i.postimg.cc/1RdDR3FH/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/Curtate-url-shortener",
+    "liveUrl": "http://curtate.gq/",
+    "tools": ["NodeJS", "MongoDB", "Bootstrap"]
+  }
+]

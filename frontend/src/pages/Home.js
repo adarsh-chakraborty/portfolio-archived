@@ -6,11 +6,12 @@ import Skillset from '../components/Skillset';
 
 const Home = () => {
   return (
-    <div className="bg-gray-100 h-screen">
+    <div className="bg-gray-100 h-full">
       <Gradient />
       <Hero />
-      <Skillset />
+
       <Projects />
+      <Skillset />
     </div>
   );
 };
