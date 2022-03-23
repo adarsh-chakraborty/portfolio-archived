@@ -5,7 +5,9 @@ module.exports = {
       fontFamily: {
         Baloo: '"Baloo 2", cursive',
         Cookie: '"Cookie", cursive',
-        Poppins: '"Poppins", sans-serif'
+        Poppins: '"Poppins", sans-serif',
+        Lobster: "'Lobster', cursive",
+        Lobster2: "'Lobster Two', cursive"
       },
       keyframes: {
         highlight: {
