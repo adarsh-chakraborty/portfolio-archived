@@ -23,9 +23,7 @@ const icons = {
 const Tech = ({ skill }) => {
   return (
     <div className="group bg-gray-50 transition-transform duration-150 ease-out cursor-pointer w-36 h-32 overflow-hidden rounded-2xl shadow-lg p-1 relative flex flex-col items-center justify-center">
-      <h1 className="text-emerald-700 font-bold text-lg font-Poppins ">
-        {skill}
-      </h1>
+      <h1 className="text-emerald-700 font-bold text-lg ">{skill}</h1>
       {icons[skill]}
       <div className="h-2 bg-emerald-700 w-full hidden group-hover:block absolute bottom-0 group-hover:animate-highlight"></div>
     </div>

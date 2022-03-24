@@ -7,7 +7,8 @@ module.exports = {
         Cookie: '"Cookie", cursive',
         Poppins: '"Poppins", sans-serif',
         Lobster: "'Lobster', cursive",
-        Lobster2: "'Lobster Two', cursive"
+        Lobster2: "'Lobster Two', cursive",
+        RobotoMono: "'Roboto Mono', monospace"
       },
       keyframes: {
         highlight: {

@@ -6,7 +6,7 @@ const Skillset = () => {
     <>
       <section className="mt-8 flex justify-center items-center gap-3">
         <div className="w-14 bg-emerald-500 h-2"></div>
-        <h1 className="text-2xl font-Baloo">My Technical Skillset</h1>
+        <h1 className="text-2xl font-Baloo font-bold">My Technical Skillset</h1>
         <div className="w-14 bg-emerald-500 h-2"></div>
       </section>
 
