@@ -1,11 +1,18 @@
 import React from 'react';
 import Project from '../components/Project';
 import allprojects from '../allprojects.json';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 
 const Projects = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="h-full w-full flex justify-center">
       <div className="w-10/12 mt-14 ">
