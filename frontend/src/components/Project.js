@@ -36,12 +36,12 @@ const Project = ({ img, title, description, tools, gitUrl, liveUrl }) => {
 
         <div className="mt-4 flex gap-6">
           <a href={gitUrl} target="_blank" rel="noreferrer">
-            <div className="group flex items-center justify-center gap-4 relative border-2 border-emerald-500  rounded-full h-11 w-11 cursor-pointer group-hover:border-0">
-              <div className="absolute h-11 w-11 bg-emerald-600 border-2 border-emerald-600 rounded-full z-0 hidden group-hover:block group-hover:animate-grow"></div>
+            <div className="group flex items-center justify-center gap-4 relative border-2 border-emerald-700  rounded-full h-11 w-11 cursor-pointer group-hover:border-0">
+              <div className="absolute h-11 w-11 bg-emerald-800 border-2 border-emerald-700 rounded-full z-0 hidden group-hover:block group-hover:animate-grow"></div>
               <div className="z-10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-emerald-500 group-hover:text-emerald-100 transition-colors duration-200 ease-in"
+                  className="h-8 w-8 text-emerald-700 group-hover:text-emerald-100 transition-colors duration-200 ease-in"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -58,12 +58,12 @@ const Project = ({ img, title, description, tools, gitUrl, liveUrl }) => {
           </a>
 
           <a href={liveUrl} target="_blank" rel="noreferrer">
-            <div className="group flex items-center justify-center gap-4 relative border-2 border-emerald-500  rounded-full h-11 w-11 cursor-pointer group-hover:border-0">
-              <div className="absolute h-11 w-11 bg-emerald-600 border-2 border-emerald-600 rounded-full z-0 hidden group-hover:block group-hover:animate-grow"></div>
+            <div className="group flex items-center justify-center gap-4 relative border-2 border-emerald-700  rounded-full h-11 w-11 cursor-pointer group-hover:border-0">
+              <div className="absolute h-11 w-11 bg-emerald-800 border-2 border-emerald-700 rounded-full z-0 hidden group-hover:block group-hover:animate-grow"></div>
               <div className="z-10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-emerald-500 group-hover:text-emerald-100 transition-colors duration-200 ease-in"
+                  className="h-8 w-8 text-emerald-700 group-hover:text-emerald-100 transition-colors duration-200 ease-in"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

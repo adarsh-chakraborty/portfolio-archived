@@ -36,7 +36,7 @@ module.exports = {
         }
       },
       animation: {
-        highlight: 'highlight 0.5s ease-in-out',
+        highlight: 'highlight 0.5s ease-in',
         grow: 'grow 0.3s ease-in-out'
       }
     }
