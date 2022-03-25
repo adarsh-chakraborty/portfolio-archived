@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const Projects = () => {
   return (
     <section className="mt-8 flex flex-col justify-center items-center">
-      <div className="flex gap-2 justify-center items-baseline">
-        <h1 className="text-2xl font-Baloo font-bold border-b-4 text-neutral-800  border-emerald-500">
+      <div className="flex flex-col gap-2 justify-center items-baseline">
+        <h1 className="text-2xl md:text-3xl 2xl:text-4xl font-Baloo font-bold border-b-4 text-neutral-800  border-emerald-500">
           My Projects
         </h1>
       </div>

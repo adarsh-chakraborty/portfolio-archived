@@ -48,7 +48,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="pt-8 text-sm text-neutral-900 font-semibold font-Baloo">
-        &copy; 2021
+        &copy; 2021. Login
       </div>
     </footer>
   );
