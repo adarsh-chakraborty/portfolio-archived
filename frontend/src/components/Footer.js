@@ -10,7 +10,9 @@ const Footer = () => {
       <h1 className="font-semibold text-2xl font-Poppins">
         Adarsh Chakraborty
       </h1>
-      <span className="font-Poppins">adarshc@duck.com</span>
+      <a href="mailto://adarshc@duck.com" className="font-Poppins">
+        adarshc@duck.com
+      </a>
       <div className="mt-2 flex gap-2">
         <a
           href="https://www.facebook.com/adarshwastaken/"

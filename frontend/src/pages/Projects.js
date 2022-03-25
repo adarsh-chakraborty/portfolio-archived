@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from '../components/Project';
-import allprojects from '../allprojects.json';
+import projects from '../data/projects.json';
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { IoMdArrowRoundBack } from 'react-icons/io';
@@ -14,13 +14,13 @@ const Projects = () => {
   }, [pathname]);
 
   return (
-    <div className="h-full w-full flex justify-center">
+    <div className="h-full w-full flex justify-center bg-gray-100">
       <div className="w-10/12 mt-14 ">
         <div className="mt-8 flex flex-col justify-center items-center gap-6">
-          <h1 className="font-Poppins w-8/12 2xl:w-7/12 2xl:pl-4 font-bold text-3xl align-start text-neutral-700">
+          <h1 className="font-Poppins w-9/12 2xl:w-7/12 2xl:pl-4 font-bold text-3xl align-start text-neutral-700">
             Projects
           </h1>
-          {allprojects.map((project) => (
+          {projects.map((project) => (
             <Project
               img={project.img}
               title={project.title}
@@ -29,6 +29,7 @@ const Projects = () => {
               liveUrl={project.liveUrl}
               tools={project.tools}
               key={project._id}
+              full
             />
           ))}
           <div className="py-8 px-4 flex items-center text-neutral-700">

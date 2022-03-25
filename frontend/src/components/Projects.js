@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project';
-import dummyProjects from '../dummyProjects.json';
+import topProjects from '../data/topProjects.json';
 import { Link } from 'react-router-dom';
 
 const Projects = () => {
@@ -12,7 +12,7 @@ const Projects = () => {
         </h1>
       </div>
       <div className="mt-8 flex flex-col w-full justify-center items-center gap-6">
-        {dummyProjects.map((project) => (
+        {topProjects.map((project) => (
           <Project
             img={project.img}
             title={project.title}

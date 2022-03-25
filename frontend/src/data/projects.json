@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "x1",
+    "title": "E-commerce app",
+    "description": "A full stack E-Commerce app with admin panel and paypal integration.",
+    "img": "https://i.postimg.cc/G2ZHkHdJ/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/",
+    "liveUrl": "https://github.com/adarsh-chakraborty/",
+    "tools": ["React", "Express", "MongoDB", "Bootstrap"]
+  },
+  {
+    "_id": "x2",
+    "title": "BuddyMeter",
+    "description": "Create quiz and share with friends to see how well they know you.",
+    "img": "https://i.postimg.cc/ncCdzM2B/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/BuddyMeter",
+    "liveUrl": "https://buddymeter.gq/",
+    "tools": ["React", "Express", "MongoDB", "Tailwindcss"]
+  },
+  {
+    "_id": "x3",
+    "title": "Curtate Url Shortner",
+    "description": "Shorten URLs on the fly!",
+    "img": "https://i.postimg.cc/1RdDR3FH/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/Curtate-url-shortener",
+    "liveUrl": "http://curtate.gq/",
+    "tools": ["NodeJS", "Redis", "MongoDB", "Bootstrap"]
+  },
+  {
+    "_id": "x4",
+    "title": "Recipe Hub",
+    "description": "Search over 5,000+ recipes on spoonacular.",
+    "img": "https://i.postimg.cc/B671Xvnc/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/react-recipes-app",
+    "liveUrl": "https://react-recipes-hub.netlify.app/",
+    "tools": ["React", "React-Icons", "Styled-Components"]
+  },
+  {
+    "_id": "x5",
+    "title": "Some Great Quotes",
+    "description": "Collection of Random quotes",
+    "img": "https://i.postimg.cc/ydWcsRyy/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/quotes-web-app",
+    "liveUrl": "https://somegreatquotes.netlify.app/",
+    "tools": ["React", "Firebase"]
+  },
+  {
+    "_id": "x6",
+    "title": "React Meals",
+    "description": "A Minor food ordering app, Add meals to your card and place order.",
+    "img": "https://i.postimg.cc/1XBP4XSR/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/Food-Order-Web-App",
+    "liveUrl": "https://reactmealsweb.netlify.app/",
+    "tools": ["React", "Firebase"]
+  },
+  {
+    "_id": "x7",
+    "title": "ChatHub",
+    "description": "A simple chat application with login and registration.",
+    "img": "https://i.postimg.cc/fbPvnf0D/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/ChatHub",
+    "liveUrl": "https://chat.adarsh.gq/",
+    "tools": ["JavaScript", "Tailwindcss", "SocketIO", "MongoDB"]
+  },
+  {
+    "_id": "x7",
+    "title": "Dikz",
+    "description": "View popular and latest videos from dikz and subscriber and views count from youtube api.",
+    "img": "https://i.postimg.cc/d0JS56c1/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/Dikz-Studios",
+    "liveUrl": "https://dikzstudios.gq/",
+    "tools": ["NodeJS", "Tailwindcss"]
+  },
+  {
+    "_id": "x8",
+    "title": "YoutubeDL",
+    "description": "Download youtube videos in SD and HD quality.",
+    "img": "https://i.postimg.cc/x8PWfZ2W/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/youtubedl",
+    "liveUrl": "https://youtubedl.gq/",
+    "tools": ["NodeJS", "Tailwindcss"]
+  },
+  {
+    "_id": "x9",
+    "title": "React Meetups",
+    "description": "View and add your upcoming meetups.",
+    "img": "https://i.postimg.cc/Z5yz3VFy/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/React-Meetups",
+    "liveUrl": "https://react-meetups-izt0pcgqg-adarsh-chakraborty.vercel.app/",
+    "tools": ["NextJS"]
+  }
+]

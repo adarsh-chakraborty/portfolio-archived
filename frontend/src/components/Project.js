@@ -3,9 +3,10 @@ import Framework from './Framework';
 
 import './Project.css';
 
-const Project = ({ img, title, description, tools, gitUrl, liveUrl }) => {
+const Project = ({ img, title, description, tools, gitUrl, liveUrl, full }) => {
+  console.log(full);
   return (
-    <div className="w-8/12 max-w-4xl bg-gray-50  rounded-md shadow-lg p-8 flex">
+    <div className="w-9/12 max-w-4xl bg-gray-50  rounded-md shadow-lg p-8 flex">
       <div className="group overflow-hidden w-[61.5rem] h-[15rem] rounded-lg shadow-md cursor-pointer relative m-auto">
         <img
           src={img}
@@ -13,10 +14,10 @@ const Project = ({ img, title, description, tools, gitUrl, liveUrl }) => {
           className="group-hover:scale-110 h-full max-w-full transform  w-full transition-all duration-300 block object-cover"
         ></img>
       </div>
-      <div className="mt-4 w-full flex flex-col gap-2 items-center">
+      <div className="w-full flex flex-col gap-2 items-center">
         <h1 className="font-bold font-Poppins text-xl">{title}</h1>
-        <p className="mt-4 mx-4 px-4 text-gray-700 font-Baloo">{description}</p>
-        <ul className="mt-4 flex flex-wrap items-center justify-center gap-2 max-w-md">
+        <p className="mt-2 mx-5 px-4 text-gray-700 font-Baloo">{description}</p>
+        <ul className="mt-4 pl-2 flex flex-wrap items-center justify-center gap-2 max-w-md">
           {tools.map((item, i) => (
             <Framework framework={item} key={i} />
           ))}
