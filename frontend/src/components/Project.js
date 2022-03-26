@@ -3,8 +3,7 @@ import Framework from './Framework';
 
 import './Project.css';
 
-const Project = ({ img, title, description, tools, gitUrl, liveUrl, full }) => {
-  console.log(full);
+const Project = ({ img, title, description, tools, gitUrl, liveUrl }) => {
   return (
     <div className="md:w-9/12 max-w-lg md:max-w-4xl bg-gray-50  rounded-md shadow-lg p-8 flex flex-col md:flex-row">
       <div className="group overflow-hidden w-11/12 md:w-[61.5rem] md:h-[15rem] rounded-lg shadow-md cursor-pointer relative m-auto">
