@@ -63,7 +63,7 @@
     "tools": ["JavaScript", "Tailwindcss", "SocketIO", "MongoDB"]
   },
   {
-    "_id": "x7",
+    "_id": "x8",
     "title": "Dikz",
     "description": "View popular and latest videos from dikz and subscriber and views count from youtube api.",
     "img": "https://i.postimg.cc/d0JS56c1/image.png",
@@ -72,7 +72,16 @@
     "tools": ["NodeJS", "Tailwindcss"]
   },
   {
-    "_id": "x8",
+    "_id": "x9",
+    "title": "Todo app",
+    "description": "Manage your tasks and be more productive with this minimalistic todo app.",
+    "img": "https://i.postimg.cc/brKtY9c0/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/Todo-app",
+    "liveUrl": "https://projects.adarsh.gq/todo/",
+    "tools": ["JavaScript", "JQuery", "Tailwindcss"]
+  },
+  {
+    "_id": "x10",
     "title": "YoutubeDL",
     "description": "Download youtube videos in SD and HD quality.",
     "img": "https://i.postimg.cc/x8PWfZ2W/image.png",
@@ -81,7 +90,7 @@
     "tools": ["NodeJS", "Tailwindcss"]
   },
   {
-    "_id": "x9",
+    "_id": "x11",
     "title": "React Meetups",
     "description": "View and add your upcoming meetups.",
     "img": "https://i.postimg.cc/Z5yz3VFy/image.png",

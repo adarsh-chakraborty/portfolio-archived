@@ -15,7 +15,9 @@ const Project = ({ img, title, description, tools, gitUrl, liveUrl }) => {
       </div>
       <div className="w-full flex flex-col gap-2 items-center mt-2">
         <h1 className="font-bold font-Poppins text-xl">{title}</h1>
-        <p className="mt-2 mx-5 px-4 text-gray-700 font-Baloo">{description}</p>
+        <p className="mt-2 mx-5 px-1 2xl:px-4 text-gray-700 font-Baloo">
+          {description}
+        </p>
         <ul className="mt-4 pl-2 flex flex-wrap items-center justify-center gap-2 max-w-md">
           {tools.map((item, i) => (
             <Framework framework={item} key={i} />
