@@ -19,12 +19,62 @@ const icons = {
   Git: <BsGithub className={`${classes}`} />,
   Tailwindcss: <SiTailwindcss className={`${classes}`} />
 };
+// const icons = {
+//   MongoDB: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+//     />
+//   ),
+//   React: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+//     />
+//   ),
+//   Node: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+//     />
+//   ),
+//   Express: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+//     />
+//   ),
+//   SocketIO: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
+//     />
+//   ),
+//   NextJS: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+//     />
+//   ),
+//   Git: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+//     />
+//   ),
+//   Tailwindcss: (
+//     <img
+//       className="w-14 h-14 p-1 "
+//       src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+//     />
+//   )
+// };
 
 const Tech = ({ skill }) => {
   return (
     <div className="group bg-gray-50 transition-transform duration-150 ease-out cursor-pointer w-36 h-32 overflow-hidden rounded-2xl shadow-lg p-1 relative flex flex-col items-center justify-center">
-      <h1 className="text-emerald-800 font-bold text-lg ">{skill}</h1>
       {icons[skill]}
+      <h1 className="text-emerald-900 font-bold font-Poppins mt-2">{skill}</h1>
       <div className="h-2 bg-emerald-800 w-full hidden group-hover:block absolute bottom-0 group-hover:animate-highlight"></div>
     </div>
   );
