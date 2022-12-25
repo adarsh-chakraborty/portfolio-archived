@@ -1,5 +1,14 @@
 [
   {
+    "_id": "0",
+    "title": "Amazon Reviews Scrapper",
+    "description": "A Powerful & Robust scrapper which can scrap reviews from amazon using 10 random proxies and provides the user an excel file.",
+    "img": "https://i.postimg.cc/NfDkBM2x/image.png",
+    "gitUrl": "https://github.com/adarsh-chakraborty/",
+    "liveUrl": "https://github.com/adarsh-chakraborty/",
+    "tools": ["FastAPI", "Beautiful Soup", "Tailwindcss", "Python"]
+  },
+  {
     "_id": "1",
     "title": "E-commerce app",
     "description": "A full stack E-Commerce app with admin panel and paypal integration.",
