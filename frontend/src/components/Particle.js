@@ -5,14 +5,14 @@ import { useCallback } from 'react';
 import particleConfig from '../data/particleConfig';
 import './Particle.css';
 
-function getRandomInt(max) {
+function getRandomInt(max = 3) {
   const temp = Math.floor(Math.random() * max);
   console.log(temp);
   return temp;
 }
 
 const Particle = () => {
-  const config = particleConfig[getRandomInt(5)];
+  const config = particleConfig[getRandomInt()];
   console.log(particleConfig);
   const particlesInit = useCallback(async (engine) => {
     // console.log(engine);

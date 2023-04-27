@@ -3,6 +3,7 @@ import { BsFacebook } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -48,7 +49,14 @@ const Footer = () => {
         </a>
       </div>
       <div className="pt-8 text-sm text-neutral-900 font-semibold font-Baloo">
-        &copy; 2021. Login
+        &copy; 2023.{' '}
+        <Link
+          to="/login"
+          className="text-neutral-900 font-bold font-Baloo underline"
+        >
+          Login
+        </Link>
+        .
       </div>
     </footer>
   );

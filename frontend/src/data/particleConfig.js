@@ -586,6 +586,6 @@ const idk3 = {
   }
 };
 
-const configs = [chars, star, idk1, idk2, idk3];
+const configs = [chars, idk2, idk3];
 
 export default configs;
