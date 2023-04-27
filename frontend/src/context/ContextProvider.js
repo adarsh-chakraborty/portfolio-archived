@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 import AppContext from './app-context';
 import axios from '../api/axios';
+import Loading from '../components/Loading';
 
 const defaultState = {
   token: null,
@@ -77,7 +78,17 @@ const ContextProvider = ({ children }) => {
   };
   return (
     <AppContext.Provider value={appContext}>
-      {state.loading ? <div>Loading...</div> : children}
+      {state.loading ? (
+        <div className="w-screen h-screen flex items-center bg-green-100 text-center mx-auto">
+          <img
+            src="/android-chrome-192x192.png"
+            alt="A"
+            className="w-[6rem] shadow-md animate-bounce mx-auto "
+          />
+        </div>
+      ) : (
+        children
+      )}
     </AppContext.Provider>
   );
 };

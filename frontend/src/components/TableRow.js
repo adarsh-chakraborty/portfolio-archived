@@ -7,7 +7,8 @@ const TableRow = ({
   description,
   featured,
   id,
-  tools
+  tools,
+  deleteHandler
 }) => {
   return (
     <tr class="border-b border-gray-200 hover:bg-gray-100">
@@ -50,12 +51,12 @@ const TableRow = ({
           >
             Edit
           </Link>
-          <Link
-            to={`/project/${id}/delete`}
+          <button
             class="bg-red-500 text-white py-1 px-3 rounded-full text-xs"
+            onClick={() => deleteHandler(title, id)}
           >
             Delete
-          </Link>
+          </button>
         </div>
       </td>
     </tr>

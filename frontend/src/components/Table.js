@@ -1,18 +1,47 @@
 import TableRow from './TableRow';
 import { useEffect, useState } from 'react';
+import AppContext from '../context/app-context';
+import { useContext } from 'react';
+import axios from '../api/axios';
+
+const fetchProjects = async () => {
+  const res = await axios.get('/projects');
+  return res.data;
+};
 
 const Table = () => {
   const [featuredProjects, setFeaturedProjects] = useState([]);
+  const ctx = useContext(AppContext);
+
+  const deleteHandler = async (title, projectId) => {
+    if (window.confirm(`Are you sure you want to delete ${title}?`)) {
+      // delete project
+      console.log('Deleting project');
+      try {
+        const res = await axios.delete(`/projects/${projectId}`, {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${ctx.token}`
+          }
+        });
+        console.log(res);
+        const updatedProjects = await fetchProjects();
+        setFeaturedProjects(updatedProjects);
+      } catch (err) {
+        if (err?.response?.data?.error) {
+          alert(err.response.data.error);
+        }
+      }
+    }
+  };
 
   useEffect(() => {
     let isMounted = true;
-    fetch('http://localhost:5000/projects')
-      .then((res) => res.json())
-      .then((data) => {
-        if (isMounted) {
-          setFeaturedProjects(data);
-        }
-      });
+    fetchProjects().then((data) => {
+      if (isMounted) {
+        setFeaturedProjects(data);
+      }
+    });
 
     return () => {
       isMounted = false;
@@ -44,6 +73,7 @@ const Table = () => {
               featured={project.featured}
               id={project._id}
               tools={project.tools}
+              deleteHandler={deleteHandler}
             />
           ))}
         </tbody>

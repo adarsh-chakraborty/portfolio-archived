@@ -1,9 +1,6 @@
 import axios from 'axios';
 
-let baseURL = 'http://localhost:5000';
-if (process.env.NODE_ENV === 'production') {
-  baseURL = 'https://adarsh.up.railway.app';
-}
+const baseURL = 'http://localhost:5000';
 
 const axiosInstance = axios.create({
   baseURL,
