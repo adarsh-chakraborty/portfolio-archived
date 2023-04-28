@@ -1,3 +1,4 @@
+import Logout from '../components/Logout';
 import Table from '../components/Table';
 import { Link } from 'react-router-dom';
 const Dashboard = () => {
@@ -13,9 +14,7 @@ const Dashboard = () => {
             >
               Add New Project
             </Link>
-            <button className="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4">
-              Logout
-            </button>
+            <Logout />
           </div>
         </div>
 

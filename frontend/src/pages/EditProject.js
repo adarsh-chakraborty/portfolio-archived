@@ -5,6 +5,7 @@ import loadingSvg from '../components/loading.svg';
 import AppContext from '../context/app-context';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import Logout from '../components/Logout';
 
 const EditProject = () => {
   const { projectId } = useParams();
@@ -101,9 +102,7 @@ const EditProject = () => {
             >
               Back to Dashboard
             </Link>
-            <button className="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4">
-              Logout
-            </button>
+            <Logout />
           </div>
         </div>
 
