@@ -38,18 +38,21 @@ const Login = () => {
         Login
       </h1>
 
-      <div class="flex flex-col items-center py-6">
+      <div className="flex flex-col items-center py-6">
         <div className="block font-semibold text-red-600 p-2">{error}</div>
         <form
-          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           onSubmit={submitHandler}
         >
-          <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="username">
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 font-bold mb-2"
+              htmlFor="username"
+            >
               Username
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="username"
               type="text"
               placeholder="Enter your username"
@@ -57,12 +60,15 @@ const Login = () => {
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div class="mb-6">
-            <label class="block text-gray-700 font-bold mb-2" for="password">
+          <div className="mb-6">
+            <label
+              className="block text-gray-700 font-bold mb-2"
+              htmlFor="password"
+            >
               Password
             </label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
               type="password"
               placeholder="Enter your password"
@@ -70,15 +76,15 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div class="flex items-center justify-between">
+          <div className="flex items-center justify-between">
             <button
-              class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Login
             </button>
             <a
-              class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800"
+              className="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800"
               href="#"
             >
               Forgot Password?

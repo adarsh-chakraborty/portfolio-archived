@@ -80,58 +80,60 @@ const EditProject = () => {
       setLoading(false);
     }
 
-    setProjectTitle('');
-    setProjectDescription('');
-    setProjectImage('');
-    setFeatured(false);
-    setGitUrl('');
-    setLiveUrl('');
-    setTools('');
+    // smoothly scroll
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
-    <div className="min-h-screen w-screen bg-gray-100 ">
-      <div className="container  mx-auto h-full pb-8">
-        <div className="flex justify-center gap-[15rem] pt-8">
-          <h1 className="text-4xl font-bold font-Poppins mx-16">
+    <div classNameName="min-h-screen w-screen bg-gray-100 ">
+      <div classNameName="container  mx-auto h-full pb-8">
+        <div classNameName="flex justify-center gap-[15rem] pt-8">
+          <h1 classNameName="text-4xl font-bold font-Poppins mx-16">
             Edit Project
           </h1>
-          <div className="flex gap-5">
+          <div classNameName="flex gap-5">
             <Link
               to="/dashboard"
-              className="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4"
+              classNameName="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4"
             >
               Back to Dashboard
             </Link>
-            <button className="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4">
+            <button classNameName="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4">
               Logout
             </button>
           </div>
         </div>
 
-        <div className="flex justify-center items-center mt-3">
+        <div classNameName="flex justify-center items-center mt-3">
           {loading && (
-            <img src={loadingSvg} alt="Processing.." className="w-[130px]" />
+            <img
+              src={loadingSvg}
+              alt="Processing.."
+              classNameName="w-[130px]"
+            />
           )}
           {success && (
-            <div className="text-center text-green-700 font-bold text-xl bg-green-100 rounded-md shadow-md border border-green-800 py-3 px-6">
+            <div classNameName="text-center text-green-700 font-bold text-xl bg-green-100 rounded-md shadow-md border border-green-800 py-3 px-6">
               {success}
             </div>
           )}
 
           {error && (
-            <div className="text-center text-red-600 font-bold text-xl bg-red-100 rounded-md shadow-md border border-red-800 py-3 px-6">
+            <div classNameName="text-center text-red-600 font-bold text-xl bg-red-100 rounded-md shadow-md border border-red-800 py-3 px-6">
               {error}
             </div>
           )}
         </div>
 
-        <div class="mt-8 bg-white rounded-md shadow-md p-6 max-w-2xl mx-auto">
+        <div className="mt-8 bg-white rounded-md shadow-md p-6 max-w-2xl mx-auto">
           <form onSubmit={handleSubmit}>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                for="project_title"
-                class="block text-gray-700 font-medium mb-2"
+                htmlFor="project_title"
+                className="block text-gray-700 font-medium mb-2"
               >
                 Project Title
               </label>
@@ -142,13 +144,13 @@ const EditProject = () => {
                 name="project_title"
                 value={projectTitle}
                 onChange={(e) => setProjectTitle(e.target.value)}
-                class="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                for="project_description"
-                class="block text-gray-700 font-medium mb-2"
+                htmlFor="project_description"
+                className="block text-gray-700 font-medium mb-2"
               >
                 Project Description
               </label>
@@ -158,13 +160,13 @@ const EditProject = () => {
                 name="project_description"
                 value={projectDescription}
                 onChange={(e) => setProjectDescription(e.target.value)}
-                class="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               ></textarea>
             </div>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                for="project_image"
-                class="block text-gray-700 font-medium mb-2"
+                htmlFor="project_image"
+                className="block text-gray-700 font-medium mb-2"
               >
                 Project Image
               </label>
@@ -175,34 +177,37 @@ const EditProject = () => {
                 name="project_image"
                 value={projectImage}
                 onChange={(e) => setProjectImage(e.target.value)}
-                class="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
             <div>
               <label
-                htmlFor="is_featured"
-                className="block text-gray-700 font-medium mb-2"
+                htmlhtmlFor="is_featured"
+                classNameName="block text-gray-700 font-medium mb-2"
               >
                 Featured:
                 <button
                   id="is_featured"
                   type="button"
-                  className={`${
+                  classNameName={`${
                     featured ? 'bg-green-500' : 'bg-gray-500'
                   } relative inline-flex items-center h-6 rounded-full w-11 ml-4`}
                   onClick={() => setFeatured(!featured)}
                 >
                   <span
-                    className={`${
+                    classNameName={`${
                       featured ? 'translate-x-6' : 'translate-x-1'
-                    } inline-block w-4 h-4 transform bg-white rounded-full`}
+                    } inline-block w-4 h-4 transhtmlForm bg-white rounded-full`}
                   />
                 </button>
               </label>
             </div>
 
-            <div class="mb-4">
-              <label for="git_url" class="block text-gray-700 font-medium mb-2">
+            <div className="mb-4">
+              <label
+                htmlFor="git_url"
+                className="block text-gray-700 font-medium mb-2"
+              >
                 Git URL
               </label>
               <input
@@ -212,13 +217,13 @@ const EditProject = () => {
                 name="git_url"
                 value={gitUrl}
                 onChange={(e) => setGitUrl(e.target.value)}
-                class="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
-            <div class="mb-4">
+            <div className="mb-4">
               <label
-                for="live_url"
-                class="block text-gray-700 font-medium mb-2"
+                htmlFor="live_url"
+                className="block text-gray-700 font-medium mb-2"
               >
                 Live URL
               </label>
@@ -229,11 +234,14 @@ const EditProject = () => {
                 name="live_url"
                 value={liveUrl}
                 onChange={(e) => setLiveUrl(e.target.value)}
-                class="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
-            <div class="mb-4">
-              <label for="tools" class="block text-gray-700 font-medium mb-2">
+            <div className="mb-4">
+              <label
+                htmlFor="tools"
+                className="block text-gray-700 font-medium mb-2"
+              >
                 Tools
               </label>
               <input
@@ -243,23 +251,23 @@ const EditProject = () => {
                 type="text"
                 id="tools"
                 name="tools"
-                class="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="border border-gray-300 p-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
-              <p class="text-gray-500 text-sm mt-2">
+              <p className="text-gray-500 text-sm mt-2">
                 Enter the tools used in the project separated by commas (e.g.
                 HTML, CSS, JavaScript)
               </p>
             </div>
-            <div class="mt-6 flex gap-4">
+            <div className="mt-6 flex gap-4">
               <button
                 type="submit"
-                class="bg-indigo-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="bg-indigo-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Save Changes
               </button>
               <Link
                 to="/dashboard"
-                className="bg-gray-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                classNameName="bg-gray-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Back
               </Link>

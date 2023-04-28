@@ -4,11 +4,11 @@
   "description": "My personal portfolio website",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "npm start --prefix frontend",
     "client": "npm start --prefix frontend",
     "server": "nodemon backend/server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "deploy": "npm ci --prefix frontend && npm run build --prefix frontend"
+    "deploy": "npm ci --prefix frontend && npm run build --prefix frontend && firebase deploy --only hosting"
   },
   "repository": {
     "type": "git",

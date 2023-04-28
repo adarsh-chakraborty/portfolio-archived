@@ -7,7 +7,7 @@ const Error404 = () => {
           <h1 className="text-4xl font-bold font-Poppins">Error 404</h1>
         </div>
 
-        <div class="mt-8 text-center bg-white rounded-md shadow-md p-6 max-w-2xl mx-auto">
+        <div className="mt-8 text-center bg-white rounded-md shadow-md p-6 max-w-2xl mx-auto">
           The Page you're looking for is not found.
           <Link
             to="/"

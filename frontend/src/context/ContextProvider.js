@@ -1,7 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
 import AppContext from './app-context';
 import axios from '../api/axios';
-import Loading from '../components/Loading';
 
 const defaultState = {
   token: null,
@@ -44,13 +43,45 @@ const ContextProvider = ({ children }) => {
     dispatch({ type: 'loginError', loginError: msg });
   };
 
+  // axios.interceptors.request.use((config) => {
+  //   if (state.token) {
+  //     config.headers.Authorization = `Bearer ${state.token}`;
+  //   }
+  //   return config;
+  // });
+
+  useEffect(() => {
+    axios.interceptors.response.use(
+      (response) => {
+        return response;
+      },
+      async (error) => {
+        const originalRequest = error.config;
+        if (error.response.status === 401 && !originalRequest._retry) {
+          originalRequest._retry = true;
+          try {
+            const response = await axios.post('/token', {});
+            const newAccessToken = response.data.token;
+            // previous token
+            originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
+            login(newAccessToken);
+            return axios(originalRequest);
+          } catch (error) {
+            console.log(error);
+            logout();
+          }
+        }
+        return Promise.reject(error);
+      }
+    );
+  }, []);
+
   useEffect(() => {
     let isMounted = true;
     axios
       .post('/token', {})
       .then((res) => {
         if (isMounted) {
-          console.log('Dispatching Login');
           login(res.data.token);
         }
       })
