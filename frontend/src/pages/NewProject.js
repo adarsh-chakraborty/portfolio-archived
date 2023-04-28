@@ -63,48 +63,42 @@ const NewProject = () => {
   };
 
   return (
-    <div classNameName="min-h-screen w-screen bg-gray-100 ">
-      <div classNameName="container  mx-auto h-full pb-8">
-        <div classNameName="flex justify-around pt-8">
-          <h1 classNameName="text-4xl font-bold font-Poppins">
-            Add New Project
-          </h1>
-          <div classNameName="flex gap-5">
+    <div className="min-h-screen w-screen bg-gray-100 ">
+      <div className="container  mx-auto h-full pb-8">
+        <div className="flex justify-around pt-8">
+          <h1 className="text-4xl font-bold font-Poppins">Add New Project</h1>
+          <div className="flex gap-5">
             <Link
               to="/dashboard"
-              classNameName="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4"
+              className="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4"
             >
               Back to Dashboard
             </Link>
-            <button classNameName="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4">
+            <button className="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4">
               Logout
             </button>
           </div>
         </div>
 
-        <div classNameName="flex justify-center items-center mt-3">
+        <div className="flex justify-center items-center mt-3">
           {loading && (
-            <img
-              src={loadingSvg}
-              alt="Processing.."
-              classNameName="w-[130px]"
-            />
+            <img src={loadingSvg} alt="Processing.." className="w-[130px]" />
           )}
           {success && (
-            <div classNameName="text-center text-green-700 font-bold text-xl bg-green-100 rounded-md shadow-md border border-green-800 py-3 px-6">
+            <div className="text-center text-green-700 font-bold text-xl bg-green-100 rounded-md shadow-md border border-green-800 py-3 px-6">
               {success}
             </div>
           )}
 
           {error && (
-            <div classNameName="text-center text-red-600 font-bold text-xl bg-red-100 rounded-md shadow-md border border-red-800 py-3 px-6">
+            <div className="text-center text-red-600 font-bold text-xl bg-red-100 rounded-md shadow-md border border-red-800 py-3 px-6">
               {error}
             </div>
           )}
         </div>
 
         <div className="mt-8 bg-white rounded-md shadow-md p-6 max-w-2xl mx-auto">
-          <htmlForm onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
                 htmlFor="project_title"
@@ -157,20 +151,20 @@ const NewProject = () => {
             </div>
             <div>
               <label
-                htmlhtmlFor="is_featured"
-                classNameName="block text-gray-700 font-medium mb-2"
+                htmlFor="is_featured"
+                className="block text-gray-700 font-medium mb-2"
               >
                 Featured:
                 <button
                   id="is_featured"
                   type="button"
-                  classNameName={`${
+                  className={`${
                     featured ? 'bg-green-500' : 'bg-gray-500'
                   } relative inline-flex items-center h-6 rounded-full w-11 ml-4`}
                   onClick={() => setFeatured(!featured)}
                 >
                   <span
-                    classNameName={`${
+                    className={`${
                       featured ? 'translate-x-6' : 'translate-x-1'
                     } inline-block w-4 h-4 transhtmlForm bg-white rounded-full`}
                   />
@@ -242,12 +236,12 @@ const NewProject = () => {
               </button>
               <Link
                 to="/dashboard"
-                classNameName="bg-gray-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="bg-gray-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Back
               </Link>
             </div>
-          </htmlForm>
+          </form>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ const TableRow = ({
       <td className="py-3 px-6 max-w-[2rem] text-left">
         {tools.map((tool) => (
           <div
-            classNameName="text-sm font-Baloo text-emerald-600 font-semibold"
+            className="text-sm font-Baloo text-emerald-600 font-semibold"
             key={tool}
           >
             {tool}
@@ -44,10 +44,10 @@ const TableRow = ({
         )}
       </td>
       <td className="py-3 px-6 text-center">
-        <div classNameName="flex gap-2">
+        <div className="flex gap-2">
           <Link
             to={`/project/${id}/edit`}
-            classNameName="bg-blue-500 text-white py-1 px-3 rounded-full text-xs"
+            className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs"
           >
             Edit
           </Link>

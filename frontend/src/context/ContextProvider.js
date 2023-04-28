@@ -22,7 +22,12 @@ const reducerAction = (state, payload) => {
     case 'logout':
       return { ...state, token: null, isLoggedIn: false, loading: false };
     case 'loginError':
-      return { ...state, loginError: payload.loginError, loading: false };
+      return {
+        ...state,
+        loginError: payload.loginError,
+        isLoggedIn: false,
+        loading: false
+      };
     default:
       return defaultState;
   }
@@ -57,7 +62,7 @@ const ContextProvider = ({ children }) => {
       },
       async (error) => {
         const originalRequest = error.config;
-        if (error.response.status === 401 && !originalRequest._retry) {
+        if (error.response.status === 403 && !originalRequest._retry) {
           originalRequest._retry = true;
           try {
             const response = await axios.post('/token', {});
@@ -77,26 +82,16 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    let isMounted = true;
-    axios
-      .post('/token', {})
-      .then((res) => {
-        if (isMounted) {
-          login(res.data.token);
-        }
-      })
-      .catch((err) => {
-        if (isMounted) {
-          let errMsg = err?.response?.data?.error
-            ? err.response.data.error
-            : 'Authentication Failed';
-          loginError(errMsg);
-        }
-      });
-
-    return () => {
-      isMounted = false;
+    const checkLogin = async () => {
+      try {
+        const res = await axios.post('/token', {});
+        login(res.data.token);
+      } catch (err) {
+        console.log(err);
+        loginError("You're not logged in");
+      }
     };
+    checkLogin();
   }, []);
 
   const appContext = {
