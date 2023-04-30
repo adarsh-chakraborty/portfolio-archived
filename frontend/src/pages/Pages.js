@@ -8,6 +8,7 @@ import Dashboard from './Dashboard';
 import NewProject from './NewProject';
 import EditProject from './EditProject';
 import Error404 from './Error404';
+import Contact from './Contact';
 
 const ProtectedRoute = ({ isLoggedIn, children }) => {
   if (!isLoggedIn) {
@@ -35,6 +36,7 @@ const Pages = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="/login"
           element={

@@ -105,7 +105,7 @@ const ContextProvider = ({ children }) => {
   return (
     <AppContext.Provider value={appContext}>
       {state.loading ? (
-        <div className="w-screen h-screen flex items-center bg-green-100 text-center mx-auto">
+        <div className="w-screen h-screen flex items-center bg-blue-100 text-center mx-auto">
           <img
             src="/android-chrome-192x192.png"
             alt="A"

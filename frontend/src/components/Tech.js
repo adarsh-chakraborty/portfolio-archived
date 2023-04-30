@@ -83,7 +83,7 @@ const Tech = ({ skill }) => {
     <div className="group bg-gray-50 transition-transform duration-150 ease-out cursor-pointer w-36 h-32 overflow-hidden rounded-2xl shadow-lg p-1 relative flex flex-col items-center justify-center">
       {icons[skill]}
       <h1 className="text-stone-900 font-bold font-Poppins mt-2">{skill}</h1>
-      <div className="h-2 bg-emerald-800 w-full hidden group-hover:block absolute bottom-0 group-hover:animate-highlight"></div>
+      <div className="h-2 bg-[#0e59b4] w-full hidden group-hover:block absolute bottom-0 group-hover:animate-highlight"></div>
     </div>
   );
 };

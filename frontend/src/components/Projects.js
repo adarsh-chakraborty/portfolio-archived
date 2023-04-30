@@ -20,9 +20,12 @@ const Projects = () => {
     getProjects();
   }, []);
   return (
-    <section className="mt-8 flex flex-col justify-center items-center">
+    <section
+      className="mt-12 flex flex-col justify-center items-center"
+      id="projects"
+    >
       <div className="flex flex-col gap-2 justify-center items-baseline">
-        <h1 className="text-2xl md:text-3xl 2xl:text-4xl font-Baloo font-bold border-b-4 text-neutral-800  border-emerald-500">
+        <h1 className="text-2xl md:text-3xl 2xl:text-4xl font-Baloo font-bold border-b-4 text-neutral-800  border-[#0e59b4]">
           My Projects
         </h1>
       </div>

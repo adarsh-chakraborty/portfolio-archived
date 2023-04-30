@@ -34,7 +34,7 @@ const Login = () => {
   };
   return (
     <div className="h-screen flex flex-col  items-center bg-gray-100">
-      <h1 className="text-3xl font-Poppins border-b-2 border-green-700 p-1 mt-14">
+      <h1 className="text-3xl font-Poppins border-b-2 border-blue-700 p-1 mt-14">
         Login
       </h1>
 
@@ -78,13 +78,13 @@ const Login = () => {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Login
             </button>
             <a
-              className="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800"
+              className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
               href="#"
             >
               Forgot Password?

@@ -1,23 +1,41 @@
 import React from 'react';
-import Particle from './Particle';
+import Navbar from './Navbar';
+// 0e59b4
 
+// --bg: #f5f6f7;
+// --bg-alt: #fff;
+// --fg: #444;
+// --fg-alt: #222;
+// --primary: #306cc4;
+// --primary-alt: #185dc7;
+// --primary-light: rgba(44,93,206,0.1);
+// --container-shadow: 0 2px 4px rgb(0 0 0/10%);
 const Hero = () => {
   return (
-    <>
-      <section className="z-10 shadow-md h-72 bg-gradient-to-r from-yellow-200 via-green-200 to-green-300 flex flex-col justify-center items-center">
-        <Particle />
-        <div className="z-10 mt-4 text-3xl font-bold font-Poppins text-emerald-900 pb-2 border-b-2 border-green-900">
-          Adarsh Chakraborty
-        </div>
-        <div className="z-10 pt-1 text-xl font-Baloo text-emerald-900">
-          MERN Stack Developer
-        </div>
+    <div className=" bg-[#f5f6f7] bg-bbblurry bg-cover  font-Poppins border-t-[10px] border-[#0e59b4]">
+      <Navbar />
 
-        <div className="z-10 mt-8 text-emerald-800 font-Cookie text-2xl">
-          "I code simple things and I love what i do..."
+      <div className=" h-screen mx-auto flex flex-col items-center 2xl:gap-4">
+        <section className="text-left border-b-4 border-[#306cc4] mt-24 2xl:mt-40 ">
+          <div className="text-[4rem] font-extrabold text-neutral-900">
+            Hi. I am
+          </div>
+          <div className="text-[#0e59b4] font-bold text-[4rem]">
+            Adarsh Chakraborty.
+          </div>
+        </section>
+
+        <div className="mt-[2.25rem] text-lg">
+          I am a full stack developer with experience in building web
+          applications {`</>`}.
         </div>
-      </section>
-    </>
+        <div className="mt-12">
+          <button className="px-6 py-3 bg-[#1270e3] hover:bg-blue-700 transition-colors ease-out text-blue-50 rounded-[5px]  ">
+            Let's Talk
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
