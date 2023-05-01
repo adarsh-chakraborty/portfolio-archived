@@ -14,6 +14,12 @@ const Dashboard = () => {
             >
               Add New Project
             </Link>
+            <Link
+              to="/messages"
+              className="bg-white shadow-md hover:shadow-lg rounded-lg py-2 px-4"
+            >
+              Messages (0)
+            </Link>
             <Logout />
           </div>
         </div>

@@ -12,6 +12,10 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  const forgotPasswordHandler = async (e) => {
+    alert('am too lazy to implement this feature, use admin admin');
+  };
+
   const submitHandler = async (e) => {
     setError('');
     e.preventDefault();
@@ -29,6 +33,7 @@ const Login = () => {
         ? err.response.data.error
         : 'Some error occured. Try again later.';
       setError(errMsg);
+      ctx.loginError(errMsg);
       console.log(err);
     }
   };
@@ -83,12 +88,12 @@ const Login = () => {
             >
               Login
             </button>
-            <a
+            <button
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-              href="#"
+              onClick={forgotPasswordHandler}
             >
               Forgot Password?
-            </a>
+            </button>
           </div>
         </form>
       </div>

@@ -7,7 +7,8 @@ const defaultState = {
   isLoggedIn: false,
   loading: true,
   login: () => {},
-  logout: () => {}
+  logout: () => {},
+  loginError: () => {}
 };
 
 const reducerAction = (state, payload) => {
@@ -26,7 +27,8 @@ const reducerAction = (state, payload) => {
         ...state,
         loginError: payload.loginError,
         isLoggedIn: false,
-        loading: false
+        loading: false,
+        token: null
       };
     default:
       return defaultState;
@@ -87,7 +89,6 @@ const ContextProvider = ({ children }) => {
         const res = await axios.post('/token', {});
         login(res.data.token);
       } catch (err) {
-        console.log(err);
         loginError("You're not logged in");
       }
     };
@@ -98,7 +99,7 @@ const ContextProvider = ({ children }) => {
     token: state.token,
     isLoggedIn: state.isLoggedIn,
     loading: state.loading,
-    loginError: state.loginError,
+    loginError,
     login,
     logout
   };

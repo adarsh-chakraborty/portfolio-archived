@@ -9,6 +9,7 @@ import NewProject from './NewProject';
 import EditProject from './EditProject';
 import Error404 from './Error404';
 import Contact from './Contact';
+import Messages from './Messages';
 
 const ProtectedRoute = ({ isLoggedIn, children }) => {
   if (!isLoggedIn) {
@@ -28,8 +29,6 @@ const PublicRouteOnly = ({ isLoggedIn, children }) => {
 
 const Pages = () => {
   const ctx = useContext(AppContext);
-  console.log(ctx);
-  console.log('You are logged in', ctx.isLoggedIn);
 
   return (
     <>
@@ -51,6 +50,15 @@ const Pages = () => {
           element={
             <ProtectedRoute isLoggedIn={ctx.isLoggedIn}>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/messages"
+          element={
+            <ProtectedRoute isLoggedIn={ctx.isLoggedIn}>
+              <Messages />
             </ProtectedRoute>
           }
         />
