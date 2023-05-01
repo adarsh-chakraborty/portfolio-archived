@@ -8,7 +8,8 @@
     "client": "npm start --prefix frontend",
     "server": "nodemon backend/server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "deploy": "npm ci --prefix frontend && npm run build --prefix frontend && firebase deploy --only hosting"
+    "deploy": "npm i --prefix frontend && npm run build --prefix frontend && firebase deploy --only hosting"
+    
   },
   "repository": {
     "type": "git",

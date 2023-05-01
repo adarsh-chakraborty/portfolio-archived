@@ -25,11 +25,11 @@ const Hero = () => {
           </div>
         </section>
 
-        <div className="mt-[2.25rem] text-lg text-center">
+        <div className="mt-[2.25rem] text-lg text-center px-4">
           I am a full stack developer with experience in building web
           applications {`</>`}.
         </div>
-        <div className="mt-14">
+        <div className="mt-14 mb-12">
           <button className="px-6 py-3 bg-[#1270e3] hover:bg-blue-700 transition-colors ease-out text-blue-50 rounded-[5px]  ">
             Let's Talk
           </button>
