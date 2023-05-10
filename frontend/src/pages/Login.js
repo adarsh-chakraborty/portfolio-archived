@@ -17,9 +17,13 @@ const Login = () => {
   };
 
   const submitHandler = async (e) => {
-    setError('');
     e.preventDefault();
+    if (!username || !password) {
+      setError('Please fill all the fields');
+      return;
+    }
     try {
+      setError('');
       const res = await axios.post('/login', {
         username,
         password
@@ -89,6 +93,7 @@ const Login = () => {
               Login
             </button>
             <button
+              type="button"
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
               onClick={forgotPasswordHandler}
             >
