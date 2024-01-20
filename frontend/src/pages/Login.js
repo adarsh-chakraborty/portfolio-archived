@@ -47,10 +47,10 @@ const Login = () => {
         Login
       </h1>
 
-      <div className="flex flex-col items-center py-6">
+      <div className="w-full flex flex-col items-center py-6">
         <div className="block font-semibold text-red-600 p-2">{error}</div>
         <form
-          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-1/4 lg:w-1/3"
           onSubmit={submitHandler}
         >
           <div className="mb-4">

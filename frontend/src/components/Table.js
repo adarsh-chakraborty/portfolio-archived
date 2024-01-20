@@ -1,3 +1,5 @@
+// Table.jsx
+
 import TableRow from './TableRow';
 import { useEffect, useState } from 'react';
 import AppContext from '../context/app-context';
@@ -53,13 +55,11 @@ const Table = () => {
       <table className="min-w-max w-full table-auto">
         <thead>
           <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-            <th className="py-3 px-6 text-left">S.No</th>
-            <th className="py-3 px-6 text-left">Image</th>
-            <th className="py-3 px-6 text-left">Project Title</th>
-            <th className="py-3 px-6 text-left">Description</th>
-            <th className="py-3 px-6 text-center">Tools</th>
-            <th className="py-3 px-6 text-center">Featured</th>
-            <th className="py-3 px-6 text-center">Edit / Delete</th>
+            <th className="py-3 px-4 md:px-6 text-left">S.No</th>
+            <th className="py-3 px-4 md:px-6 text-left">Project</th>
+            <th className="py-3 px-4 md:px-6 text-left">Tools</th>
+            <th className="py-3 px-4 md:px-6 text-center">Featured</th>
+            <th className="py-3 px-4 md:px-6 text-center">Actions</th>
           </tr>
         </thead>
         <tbody className="text-gray-600 text-sm font-light">

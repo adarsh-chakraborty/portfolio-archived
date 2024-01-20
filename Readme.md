@@ -1,3 +1,15 @@
+# Adarsh Chakraborty
+Full Stack Web Developer </>
+
+## Portfolio Live Deployment
+URL: https://adarsh-chakraborty.web.app/
+
+## How to Run
+
+Install dependencies and start.
+```
+npm i --prefix frontend && npm run dev
+```
 ## How to build and Deploy
 
 Install the package globally.
