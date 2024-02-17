@@ -74,7 +74,6 @@ const ContextProvider = ({ children }) => {
             login(newAccessToken);
             return axios(originalRequest);
           } catch (error) {
-            console.log(error);
             logout();
           }
         }

@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/adarsh-chakraborty/portfolio#readme",
   "dependencies": {
-    "concurrently": "^7.0.0",
-    "react-device-detect": "^2.2.3"
+    "concurrently": "^7.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
