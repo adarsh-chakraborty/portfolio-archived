@@ -8,7 +8,7 @@ URL: https://adarsh-chakraborty.web.app/
 
 Install dependencies and start.
 ```
-npm i --prefix frontend && npm run dev
+npm i && npm run dev
 ```
 ## How to build and Deploy
 
@@ -22,6 +22,12 @@ Login to Firebase with your account using the following command. `neversettle@`
 
 ```
 firebase login
+```
+
+Get CI Token. `neversettle@`
+
+```
+firebase login:ci
 ```
 
 Make the desired changes and to build and deploy the project use:
