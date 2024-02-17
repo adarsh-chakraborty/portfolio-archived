@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import axios from '../api/axios';
 import ReactGA from "react-ga";
@@ -9,6 +9,10 @@ function Contact({ onClose }) {
   const [message, setMessage] = useState('');
   const [error, setError] = useState({});
   const [success, setSuccess] = useState(null);
+  
+  const [isSubmitting, setIsSubmitting ] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
+
   const successAudio = new Audio('/media/success.mp3');
   const errorAudio = new Audio('/media/error.mp3');
 
@@ -30,10 +34,16 @@ function Contact({ onClose }) {
   }
 
   const closeForm = () => {
-    stopSuccessAudio();
-    stopErrorAudio();
-    onClose();
-  }
+    console.log("Form closed")
+    clearTimeout(timeoutId);
+    successAudio.currentTime = 0; // Reset the audio playback to the beginning
+    successAudio.pause(); // Pause the audio
+    stopErrorAudio(); // Stop the error audio as well, if it's playing
+    onClose(); // Call the onClose function to close the form
+  };
+
+  
+
   
   const validatePayload = (payload) => {
     let errors = {};
@@ -70,25 +80,36 @@ function Contact({ onClose }) {
     const validationErrors = validatePayload(payload);
     setError(validationErrors);
 
-    if (Object.keys(validationErrors).length != 0) {
+    if (Object.keys(validationErrors).length !== 0) {
       playErrorAudio();
       return;
       
     }
 
     try {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      
+      setIsSubmitting(true);
       const res = await axios.post('/message', payload);
       setSuccess(res.data.message);
       playSuccessAudio();
       setName('');
       setEmail('');
       setMessage('');
+      setIsSubmitting(false);
 
-      setTimeout(() => {
+      
+      const newTimeoutId = setTimeout(() => {
         setSuccess(null);
         stopSuccessAudio();
         closeForm();
-      }, 12000);
+      }, 11000);
+
+      setTimeoutId(newTimeoutId);
+
+
 
       ReactGA.event({
         category: 'Contact Form Submit',
@@ -101,6 +122,8 @@ function Contact({ onClose }) {
       console.log(err);
       setError(err.response.data.error ?? err.message);
       playErrorAudio();
+      setIsSubmitting(false);
+
       setTimeout(() => {
         
         setError({});
@@ -211,17 +234,18 @@ function Contact({ onClose }) {
       </div>
       <div className="flex gap-8">
         <button
-          className="ml-8 px-4 py-2 font-semibold text-white bg-blue-800 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+        disabled={isSubmitting}
+          className={`ml-8 px-4 py-2 font-semibold text-white bg-blue-800 ${isSubmitting ? "bg-blue-400" : ""} rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50`}
           
         >
-          Submit
+          {isSubmitting ? "🐱 Submitting.." : "🐱 Submit"}
         </button>
         <button
           type="button"
           onClick={closeForm}
-          className="px-4 py-2 font-semibold text-white bg-blue-800 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          className="px-4 py-2 font-semibold text-white bg-gray-700 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
         >
-          Back
+          ❌ Back
         </button>
       </div>
     </form>
