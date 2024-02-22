@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        bbblurry: "url('https://vipinmishra.dev/assets/bbblurry.svg')"
+        bbblurry: "url('https://adarsh-chakraborty.web.app/assets/bbblurry.svg')"
       },
       fontFamily: {
         Baloo: '"Baloo 2", cursive',

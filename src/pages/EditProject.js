@@ -9,7 +9,6 @@ import Logout from '../components/Logout';
 
 const EditProject = () => {
   const { projectId } = useParams();
-  const [fetching, setFetching] = useState(true);
   const [projectTitle, setProjectTitle] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
   const [projectImage, setProjectImage] = useState('');

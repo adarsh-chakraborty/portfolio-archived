@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import Home from './Home';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Projects from './Projects';
 import Login from './Login';
 import AppContext from '../context/app-context';
@@ -29,6 +30,11 @@ const PublicRouteOnly = ({ isLoggedIn, children }) => {
 
 const Pages = () => {
   const ctx = useContext(AppContext);
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
 
   return (
     <>

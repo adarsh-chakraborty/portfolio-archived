@@ -1,12 +1,18 @@
 import Contact from '../pages/Contact';
 import { useState } from 'react';
 import Modal from './Modal';
+import ReactGA from "react-ga";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
+    ReactGA.event({
+      category: 'User Interaction',
+      action: 'Clicked Contact on Navbar',
+      label: 'navbar contact button',
+    });
   };
 
   const handleCloseModal = () => {

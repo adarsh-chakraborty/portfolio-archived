@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
 const Modal = ({ isOpen, onClose, children }) => {
   const handleBackdropClick = (event) => {
-    console.log(event.target);
+    
     if (event.target.id === 'backdrop') {
       onClose();
     }

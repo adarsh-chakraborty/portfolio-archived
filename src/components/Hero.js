@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import Navbar from './Navbar';
 import { isMobile } from 'react-device-detect';
+import Contact from '../pages/Contact';
+import Modal from './Modal';
 
 const Hero = () => {
   const [showCatGif, setShowCatGif] = useState(false);
   const [catPosition, setCatPosition] = useState({ x: 0, y: 0 });
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const handleHoverText = () => {
     if (!isMobile) {
@@ -15,6 +29,15 @@ const Hero = () => {
   const handleLeaveText = () => {
     setShowCatGif(false);
   };
+
+  const letsTalkHandler = () => {
+    ReactGA.event({
+      category: 'Contact',
+      action: "Clicked Let's Talk Button",
+      label: 'contact',
+    });
+    handleOpenModal();
+  }
 
   
 
@@ -77,11 +100,15 @@ const Hero = () => {
           applications {`</>`}.
         </div>
         <div className="mt-14 mb-12">
-          <button className="px-6 py-3 bg-[#1270e3] hover:bg-blue-700 transition-colors ease-out text-blue-50 rounded-[5px]">
+          <button className="px-6 py-3 bg-[#1270e3] hover:bg-blue-700 transition-colors ease-out text-blue-50 rounded-[5px]" onClick={letsTalkHandler}>
             Let's Talk
           </button>
+          
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        <Contact onClose={handleCloseModal} />
+      </Modal>
     </div>
   );
 };
