@@ -1,7 +1,7 @@
 import Contact from '../pages/Contact';
 import { useState } from 'react';
 import Modal from './Modal';
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

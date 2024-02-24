@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import Home from './Home';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Projects from './Projects';
@@ -33,7 +33,7 @@ const Pages = () => {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
+    ReactGA.send({ hitType: "pageview", page: "location", title: location.search });
   }, [location]);
 
   return (

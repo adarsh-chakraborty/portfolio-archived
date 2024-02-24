@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import axios from '../api/axios';
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 function Contact({ onClose }) {
   const [name, setName] = useState('');

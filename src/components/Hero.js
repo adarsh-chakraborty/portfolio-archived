@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import Navbar from './Navbar';
 import { isMobile } from 'react-device-detect';
 import Contact from '../pages/Contact';

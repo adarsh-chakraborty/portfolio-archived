@@ -1,6 +1,6 @@
 import Pages from './pages/Pages';
 import { BrowserRouter as Router } from 'react-router-dom';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const TRACKING_ID = "G-3EC9YCLV5S";
 
