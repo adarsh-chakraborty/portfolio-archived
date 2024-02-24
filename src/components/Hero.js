@@ -99,10 +99,11 @@ const Hero = () => {
           I am a full stack developer with experience in building web
           applications {`</>`}.
         </div>
-        <div className="mt-14 mb-12">
+        <div className="mt-14 mb-12 flex gap-4">
           <button className="px-6 py-3 bg-[#1270e3] hover:bg-blue-700 transition-colors ease-out text-blue-50 rounded-[5px]" onClick={letsTalkHandler}>
-            Let's Talk
+            Download Resume
           </button>
+          
           
         </div>
       </div>
