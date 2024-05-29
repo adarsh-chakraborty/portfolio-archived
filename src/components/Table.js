@@ -6,8 +6,6 @@ import AppContext from '../context/app-context';
 import { useContext } from 'react';
 import axios from '../api/axios';
 
-
-
 const fetchProjects = async () => {
   const res = await axios.get('/projects');
   return res.data;
@@ -18,7 +16,6 @@ const Table = () => {
   const ctx = useContext(AppContext);
 
   const deleteHandler = async (title, projectId) => {
-    
     if (window.confirm(`Are you sure you want to delete ${title}?`)) {
       // delete project
       console.log('Deleting project');

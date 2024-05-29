@@ -96,7 +96,7 @@ const Hero = () => {
         </section>
 
         <div className="mt-[2.25rem] text-lg text-center px-4">
-          I am a full stack developer at Masters' Union with experience in building web
+          I am a full stack developer with experience in building web
           applications {`</>`}.
         </div>
         <div className="mt-14 mb-12 flex gap-4">
