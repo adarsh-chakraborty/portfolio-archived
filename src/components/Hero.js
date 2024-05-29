@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import { isMobile } from 'react-device-detect';
 import Contact from '../pages/Contact';
 import Modal from './Modal';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const [showCatGif, setShowCatGif] = useState(false);
@@ -30,13 +31,15 @@ const Hero = () => {
     setShowCatGif(false);
   };
 
-  const letsTalkHandler = () => {
+  const navigate = useNavigate();
+
+  const downloadResumeHandler = () => {
     ReactGA.event({
-      category: 'Contact',
-      action: "Clicked Let's Talk Button",
-      label: 'contact',
+      category: 'Download Resume',
+      action: "Clicked Download Resume Button",
+      label: 'download-resume',
     });
-    handleOpenModal();
+     navigate("/resume");
   }
 
   
@@ -100,7 +103,7 @@ const Hero = () => {
           applications {`</>`}.
         </div>
         <div className="mt-14 mb-12 flex gap-4">
-          <button className="px-6 py-3 bg-[#1270e3] hover:bg-blue-700 transition-colors ease-out text-blue-50 rounded-[5px]" onClick={letsTalkHandler}>
+          <button className="px-6 py-3 bg-[#1270e3] hover:bg-blue-700 transition-colors ease-out text-blue-50 rounded-[5px]" onClick={downloadResumeHandler}>
             Download Resume
           </button>
           
