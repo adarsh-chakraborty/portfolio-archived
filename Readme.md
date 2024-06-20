@@ -2,7 +2,7 @@
 Full Stack Web Developer </>
 
 ## Portfolio Live Deployment
-URL: https://adarsh-chakraborty.web.app/
+URL: https://adarshchakraborty.in
 
 ## How to Run
 

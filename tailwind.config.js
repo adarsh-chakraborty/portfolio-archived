@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        bbblurry: "url('https://adarsh-chakraborty.web.app/assets/bbblurry.svg')"
+        bbblurry: "url('https://adarshchakraborty.in/assets/bbblurry.svg')"
       },
       fontFamily: {
         Baloo: '"Baloo 2", cursive',
