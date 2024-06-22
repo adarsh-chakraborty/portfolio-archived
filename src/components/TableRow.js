@@ -1,5 +1,3 @@
-// TableRow.jsx
-
 import { Link } from 'react-router-dom';
 
 const TableRow = ({
@@ -13,7 +11,7 @@ const TableRow = ({
   deleteHandler
 }) => {
   return (
-    <tr className="border-b border-gray-200 hover:bg-gray-100">
+    <tr className="border-b border-gray-700 hover:bg-gray-800">
       <td className="py-2 px-4 md:py-3 md:px-6 text-left whitespace-nowrap">{index}</td>
       <td className="py-2 px-4 md:py-3 md:px-6 text-left">
         <div className="flex items-center">
@@ -34,7 +32,7 @@ const TableRow = ({
         <ul className="list-disc list-inside">
           {tools.map((tool, toolIndex) => (
             <li
-              className="text-xs md:text-sm font-Baloo text-emerald-600 font-semibold mb-1"
+              className="text-xs md:text-sm font-semibold text-green-400 mb-1"
               key={toolIndex}
             >
               {tool}
@@ -44,11 +42,11 @@ const TableRow = ({
       </td>
       <td className="py-2 px-4 md:py-3 md:px-6 text-center">
         {featured ? (
-          <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
+          <span className="bg-green-600 text-white py-1 px-3 rounded-full text-xs">
             Yes
           </span>
         ) : (
-          <span className="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">
+          <span className="bg-red-600 text-white py-1 px-3 rounded-full text-xs">
             No
           </span>
         )}
@@ -57,12 +55,12 @@ const TableRow = ({
         <div className="flex gap-2">
           <Link
             to={`/project/${id}/edit`}
-            className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs md:w-auto"
+            className="bg-blue-600 hover:bg-blue-500 text-white py-1 px-3 rounded-full text-xs md:w-auto"
           >
             Edit
           </Link>
           <button
-            className="bg-red-500 text-white py-1 px-3 rounded-full text-xs md:w-auto"
+            className="bg-red-600 hover:bg-red-500 text-white py-1 px-3 rounded-full text-xs md:w-auto"
             onClick={() => deleteHandler(title, id)}
           >
             Delete

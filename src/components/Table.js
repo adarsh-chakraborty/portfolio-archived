@@ -1,9 +1,6 @@
-// Table.jsx
-
 import TableRow from './TableRow';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import AppContext from '../context/app-context';
-import { useContext } from 'react';
 import axios from '../api/axios';
 
 const fetchProjects = async () => {
@@ -17,8 +14,6 @@ const Table = () => {
 
   const deleteHandler = async (title, projectId) => {
     if (window.confirm(`Are you sure you want to delete ${title}?`)) {
-      // delete project
-      console.log('Deleting project');
       try {
         const res = await axios.delete(`/projects/${projectId}`, {
           headers: {
@@ -26,7 +21,6 @@ const Table = () => {
             Authorization: `Bearer ${ctx.token}`
           }
         });
-        console.log(res);
         const updatedProjects = await fetchProjects();
         setFeaturedProjects(updatedProjects);
       } catch (err) {
@@ -51,10 +45,10 @@ const Table = () => {
   }, []);
 
   return (
-    <div className="bg-white shadow-md rounded my-6">
+    <div className="bg-gray-900 shadow-md rounded my-6">
       <table className="min-w-max w-full table-auto">
         <thead>
-          <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+          <tr className="bg-gray-800 text-gray-400 uppercase text-sm leading-normal">
             <th className="py-3 px-4 md:px-6 text-left">S.No</th>
             <th className="py-3 px-4 md:px-6 text-left">Project</th>
             <th className="py-3 px-4 md:px-6 text-left">Tools</th>
@@ -62,7 +56,7 @@ const Table = () => {
             <th className="py-3 px-4 md:px-6 text-center">Actions</th>
           </tr>
         </thead>
-        <tbody className="text-gray-600 text-sm font-light">
+        <tbody className="text-gray-300 text-sm font-light">
           {featuredProjects.map((project, index) => (
             <TableRow
               key={project._id}
